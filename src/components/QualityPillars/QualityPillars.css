@@ -1,0 +1,55 @@
+.quality-pillars {
+  background-color: #1a1a1a;
+  padding: 80px 0;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.quality-pillars h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.qualities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.quality-card {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.quality-card:hover {
+  transform: translateY(-5px);
+}
+
+.quality-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #e91e63;
+}
+
+.quality-card p {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+@media (max-width: 968px) {
+  .qualities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-pillars h2 {
+    font-size: 2rem;
+  }
+}

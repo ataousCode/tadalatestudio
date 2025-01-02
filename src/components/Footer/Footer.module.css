@@ -1,0 +1,192 @@
+.footer {
+  position: relative;
+  background-color: #0A0B2E;
+  color: white;
+  padding: 80px 0 40px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background-color: white;
+  clip-path: path('M0,0 L100,0 L100,100 Q50,50 0,100 L0,0 Z');
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.companyInfo {
+  max-width: 400px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #9CA3AF;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.socialLinks a {
+  color: white;
+  font-size: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.socialLinks a:hover {
+  opacity: 0.8;
+}
+
+.quickLinks h3,
+.contactInfo h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.quickLinks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quickLinks li {
+  margin-bottom: 15px;
+}
+
+.quickLinks a {
+  color: #9CA3AF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.quickLinks a:hover {
+  color: white;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contactItem span {
+  color: #9CA3AF;
+  font-size: 14px;
+}
+
+.contactItem a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.contactItem a:hover {
+  opacity: 0.8;
+}
+
+.bottom {
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  color: #9CA3AF;
+  font-size: 14px;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 30px;
+}
+
+.bottomLinks a {
+  color: #9CA3AF;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.bottomLinks a:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .companyInfo {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 60px 0 30px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .bottomLinks {
+    justify-content: center;
+  }
+
+  .wave {
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bottomLinks {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+

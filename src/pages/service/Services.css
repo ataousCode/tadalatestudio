@@ -1,0 +1,42 @@
+.services-page {
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  color: white;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.highlight-text {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    padding: 40px 20px;
+  }
+
+  .intro-section h1 {
+    font-size: 2rem;
+  }
+
+  .highlight-text {
+    font-size: 1rem;
+  }
+}
