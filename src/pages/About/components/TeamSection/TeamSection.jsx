@@ -11,8 +11,6 @@ const teamMembers = [
     name: "Jeffrey Brown",
     role: "Front End Developer",
     image: will,
-    description:
-      "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     social: {
       facebook: "#",
       twitter: "#",
@@ -21,11 +19,9 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: 'Almousleck Atalib Ag',
-    role: 'DevOps & Cloud Engineer',
+    name: "Almousleck Atalib Ag",
+    role: "DevOps & Cloud Engineer",
     image: atalib,
-    description:
-      "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     social: {
       facebook: "#",
       twitter: "#",
@@ -34,11 +30,9 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: 'Ousname Sangary',
+    name: "Ousname Sangary",
     role: "WEB DEVELOPER & ML ENGINEER",
     image: ous,
-    description:
-      "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     social: {
       facebook: "#",
       twitter: "#",
@@ -50,8 +44,6 @@ const teamMembers = [
     name: "Ampouala Benjamin",
     role: "ML & Mobile DEVELOPER",
     image: b,
-    description:
-      "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     social: {
       facebook: "#",
       twitter: "#",
