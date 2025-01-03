@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import WE from "../../Images/atalib.jpg"; // Import the image
+import WE from "../../Images/atalib.jpg";
+import SAKU from "../../Images/saku.jpg";
+import H from "../../Images/h.jpg";
 import "./ClientReviews.css";
 
 const ClientReviews = () => {
@@ -8,16 +10,16 @@ const ClientReviews = () => {
 
   const reviews = [
     {
-      text: "From the moment I began my journey with HeyFlutter, I've been nothing but impressed. Their team combines innovation, expertise, and a genuine commitment to achieving the desired outcomes for their clients. The app they've developed for us isn't just functional—it's a testament to their attention...",
-      author: "Abdulwahab Kabani",
-      position: "STRYD, Cofounder & CTO",
-      avatar: WE, // Directly assign the imported image
+      text: "TadalateStudio exceeded our expectations with their web development services. Their team was professional, responsive, and delivered a sleek, user-friendly website tailored to our needs. They met deadlines and provided valuable insights throughout the process. Highly recommended for anyone seeking reliable and high-quality web development!",
+      author: "Saku Bende T",
+      position: "C.E.O Coffex Trading Pvt LTD-Zimbabwe",
+      avatar: SAKU, // Directly assign the imported image
     },
     {
-      text: "HeyFlutter has been an invaluable partner in our transition from ReactJS to Flutter. Not only did they readily adapt to our unique demands, but they consistently went above and beyond, pushing the boundaries of Flutter and providing expert advice every step of the way. Their dedication to excellence is evid...",
-      author: "Chad Michael",
-      position: "CEO - Enjoy Movies Your Way",
-      avatar: WE, // Directly assign the imported image
+      text: "TadalateStudio did an excellent job developing our website! They were professional, attentive to our needs, and ensured the entire process was smooth and efficient. The final product exceeded our expectations—it’s user-friendly, visually stunning, and perfectly aligned with our vision. They were always available to answer our questions and made sure every detail was handled with care and amended based on request. We highly recommend TroiDev to anyone looking for a skilled and reliable web developer.",
+      author: "Yealu Kogarl",
+      position: "CEO - Raising-lazarus",
+      avatar: H, // Directly assign the imported image
     },
     {
       text: "In just 6 months launching 3 projects at the same time for the creation of the most advanced SAS platform for the management of padel academies, an app for 360% communication with customers and a modern website was a huge challenge, and it was possible thanks to HeyFlutter.com as an inv...",

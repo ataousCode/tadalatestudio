@@ -4,16 +4,16 @@ import "./AboutHero.css";
 const AboutHero = () => {
   const stats = [
     {
-      number: "35",
-      label: "Underpaid employees",
+      number: "55",
+      label: "Success projects",
     },
     {
       number: "52",
       label: "Placated clients",
     },
     {
-      number: "$25M",
-      label: "Invoices billed",
+      number: "5+",
+      label: "Experienced developers",
     },
   ];
 

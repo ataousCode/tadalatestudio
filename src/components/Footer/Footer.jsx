@@ -1,5 +1,11 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaInstagram,
+  FaWhatsappSquare,
+} from "react-icons/fa";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
@@ -12,10 +18,13 @@ const Footer = () => {
           <div className={styles.companyInfo}>
             <h2 className={styles.logo}>TadateStudio</h2>
             <p className={styles.description}>
-              DatalateStudio have much planned for the future, working with great
-              clients and continued software development.
+              DatalateStudio have much planned for the future, working with
+              great clients and continued software development.
             </p>
             <div className={styles.socialLinks}>
+              <a href="#" aria-label="YouTube">
+                <FaWhatsappSquare />
+              </a>
               <a href="#" aria-label="Facebook">
                 <FaFacebook />
               </a>
@@ -23,7 +32,10 @@ const Footer = () => {
                 <FaTwitter />
               </a>
               <a href="#" aria-label="YouTube">
-                <FaYoutube />
+                <FaLinkedin />
+              </a>
+              <a href="#" aria-label="YouTube">
+                <FaInstagram />
               </a>
             </div>
           </div>
@@ -42,13 +54,7 @@ const Footer = () => {
                 <a href="#">About Us</a>
               </li>
               <li>
-                <a href="#">Team</a>
-              </li>
-              <li>
                 <a href="#">FAQ</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
               </li>
             </ul>
           </div>
@@ -72,7 +78,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-          taladatestudio © 2025. All rights reserved.
+            taladatestudio © 2025. All rights reserved.
           </p>
           <div className={styles.bottomLinks}>
             <a href="#">Terms</a>

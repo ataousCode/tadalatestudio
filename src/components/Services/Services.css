@@ -34,7 +34,7 @@
   cursor: pointer;
 }
 
-.service-card:nth-child(3) {
+.service-card:nth-child() {
   background-color: #4a148c;
 }
 

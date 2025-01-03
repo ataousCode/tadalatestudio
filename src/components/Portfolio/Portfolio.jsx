@@ -1,107 +1,64 @@
-import React, { useState } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import WE from "../../Images/we.png"; // Import the image
-import MOBILE from "../../Images/mobile.png"; // Import the image
-import "./Portfolio.css";
+// PortfolioPage.jsx
+import React from "react";
+import styles from "./PortfolioPage.module.css";
+import WE from "../../Images/pr.png";
+import mobile from "../../Images/rw.png";
+import TR from "../../Images/tr.png";
 
-const Portfolio = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const projects = [
+const PortfolioPage = () => {
+  const portfolioItems = [
     {
-      title: "Strydd - Training App",
+      id: 1,
+      title: "Ayopark",
       description:
-        "A training app that utilizes AI to help its users to perform workouts accurately, share their ow...",
-      image: WE, // Directly assign the imported image
-      logo: WE, // Directly assign the imported image
+        "Maximize your car park's revenue potential with our innovative solutions, generating up to £50 profit share per paid parking charge.",
+      image: WE, // Corrected: Directly assign the imported image
+      buttonText: "View Case Study",
     },
     {
-      title: "Enjoy - TV Movies App",
+      id: 2,
+      title: "RAISING LAZARUS",
       description:
-        "EnjoyTV is an advanced video controller for major streaming platforms. Simply connect yo...",
-      image: MOBILE, // Directly assign the imported image
-      logo: MOBILE, // Directly assign the imported image
+        "To equip women and girls with the education and skills they need to lead independent and fulfilled lives, including training on safe and effective use of transportation tools.",
+      image: mobile, // Corrected: Directly assign the imported image
+      buttonText: "View Case Study",
     },
     {
-      title: "Digcoach - Club Manager",
+      id: 3,
+      title: "Train Booking Android & iOS",
       description:
-        "Digcoach helps clubs to manage it is customers, coaches, the scheduling of appointments, the ...",
-      image: WE, // Directly assign the imported image
-      logo: WE, // Directly assign the imported image
+        "The replicates the core functionality of a typical train booking app, from searching schedules to booking tickets, offering a seamless experience for users...",
+      image: TR,
+      buttonText: "View Case Study",
     },
   ];
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % projects.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + projects.length) % projects.length);
-  };
-
   return (
-    <section className="portfolio">
-      <div className="container">
-        <h2>We delivered many successful Products</h2>
-        <p className="subtitle">
-          Learn about the different apps and websites we have developed
-        </p>
-
-        <div className="portfolio-actions">
-          <button className="action-button">SEE PORTFOLIO</button>
-        </div>
-
-        <div className="portfolio-slider">
-          <button className="nav-button prev" onClick={prevSlide}>
-            <FaChevronLeft />
-          </button>
-
-          <div className="portfolio-grid">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className={`portfolio-card ${
-                  index === currentSlide ? "active" : ""
-                }`}
-              >
-                <img
-                  src={project.image} // Use the image directly
-                  alt={project.title}
-                  className="project-image"
-                />
-                <div className="project-info">
-                  <div className="project-header">
-                    <img
-                      src={project.logo} // Use the logo directly
-                      alt=""
-                      className="project-logo"
-                    />
-                    <h3>{project.title}</h3>
-                  </div>
-                  <p>{project.description}</p>
-                  <button className="view-case-study">View Case Study</button>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <button className="nav-button next" onClick={nextSlide}>
-            <FaChevronRight />
-          </button>
-        </div>
-
-        <div className="portfolio-dots">
-          {projects.map((_, index) => (
-            <button
-              key={index}
-              className={`dot ${index === currentSlide ? "active" : ""}`}
-              onClick={() => setCurrentSlide(index)}
-            />
-          ))}
-        </div>
+    <div className={styles.portfolioPage}>
+      <div className={styles.header}>
+        <h1>We delivered many successful Products</h1>
+        <p>Learn about the different apps and websites we have developed</p>
+        <a href="/portfolio">
+          <button className={styles.portfolioButton}>SEE PORTFOLIO</button>
+        </a>
       </div>
-    </section>
+
+      <div className={styles.carousel}>
+        {portfolioItems.map((item) => (
+          <div key={item.id} className={styles.card}>
+            <img src={item.image} alt={item.title} className={styles.image} />
+            <div className={styles.cardContent}>
+              <h2>{item.title}</h2>
+              <p>{item.description}</p>
+              {/* <button className={styles.portfolioButton}>
+                {item.buttonText}
+              </button> */}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
-export default Portfolio;
+export default PortfolioPage;

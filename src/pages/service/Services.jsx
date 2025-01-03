@@ -13,7 +13,7 @@ const Services = () => {
       <div className="services-container">
         <section className="intro-section">
           <p className="highlight-text">
-            Let's implement our Flutter expertise into your project
+            Let's implement our expertise into your project
           </p>
           <h1>How does the consulting work?</h1>
         </section>

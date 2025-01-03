@@ -1,0 +1,241 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.filterButton:hover {
+  background: #f7fafc;
+}
+
+.filterButton.active {
+  background: #e91e63;
+  color: white;
+  border-color: #e91e63;
+}
+
+.viewToggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggleButton:hover {
+  background: #f7fafc;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.projectCard {
+  display: flex;
+  gap: 32px;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-2px);
+}
+
+.projectCard.even {
+  flex-direction: row-reverse;
+}
+
+.imageContainer {
+  flex: 1;
+  min-width: 0; /* Prevents flex child from overflowing */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0; /* Prevents flex child from overflowing */
+}
+
+.projectHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+}
+
+.description {
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.category {
+  font-size: 14px;
+  color: #718096;
+  padding: 4px 12px;
+  background: #f7fafc;
+  border-radius: 16px;
+  width: fit-content;
+}
+
+/* Grid View Styles */
+.gridView {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.gridView .projectCard {
+  flex-direction: column;
+}
+
+.gridView .projectCard.even {
+  flex-direction: column;
+}
+
+.gridView .imageContainer {
+  width: 100%;
+}
+
+/* Tablet Responsive Styles */
+@media (max-width: 1024px) {
+  .container {
+    padding: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .viewToggle {
+    align-self: flex-end;
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .projectCard,
+  .projectCard.even {
+    flex-direction: column;
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .filters {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filterButton {
+    white-space: nowrap;
+  }
+
+  .header {
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .viewToggle {
+    align-self: center;
+  }
+
+  .gridView {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+
+  .projectCard {
+    padding: 12px;
+  }
+
+  .projectHeader {
+    gap: 8px;
+  }
+
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
+}

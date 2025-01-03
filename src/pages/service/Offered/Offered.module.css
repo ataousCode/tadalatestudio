@@ -1,17 +1,20 @@
 .servicesOffered {
   margin-bottom: 80px;
+  padding: 0 20px;
 }
 
 .servicesOffered h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.8rem; /* Larger heading */
+  font-weight: bold;
   margin-bottom: 3rem;
+  color: #ffffff; /* White text for better contrast */
 }
 
 .servicesGrid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem; /* More spacing between cards */
 }
 
 .serviceCard {
@@ -19,50 +22,69 @@
   border-radius: 10px;
   overflow: hidden;
   padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a slight shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Lift card on hover */
 }
 
 .serviceContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  display: flex;
   align-items: center;
+  gap: 3rem;
 }
 
-.serviceContent.reverse {
-  direction: rtl;
+.reverse .serviceContent {
+  flex-direction: row-reverse;
 }
 
-.serviceContent.reverse .serviceInfo {
-  direction: ltr;
-}
-
-.serviceContent img {
+.serviceImage {
   width: 100%;
+  max-width: 400px; /* Increased max size for images */
   height: auto;
   border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
 }
 
 .serviceInfo h3 {
-  font-size: 2rem;
+  font-size: 2.2rem; /* Larger subheading */
+  font-weight: bold;
   margin-bottom: 1.5rem;
+  color: #f7f7f7; /* Light color for better contrast */
 }
 
 .serviceInfo p {
-  color: #cccccc;
-  line-height: 1.6;
+  color: #d1d1d1; /* Softer light gray for text */
+  line-height: 1.8;
+  font-size: 1.1rem; /* Slightly larger text */
 }
 
 @media (max-width: 968px) {
   .serviceContent {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reverse .serviceContent {
+    flex-direction: column;
+  }
+
+  .serviceImage {
+    max-width: 100%;
   }
 
   .servicesOffered h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .serviceInfo h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .serviceInfo p {
+    font-size: 1rem;
   }
 }

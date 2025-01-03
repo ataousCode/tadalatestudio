@@ -40,7 +40,7 @@ const TechExpertise = () => {
     },
     {
       name: "Google Cloud",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
       color: "#4285F4",
     },
   ];

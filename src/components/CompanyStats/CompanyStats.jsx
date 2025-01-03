@@ -5,28 +5,28 @@ import "./CompanyStats.css";
 const CompanyStats = () => {
   const stats = [
     {
-      number: "760+",
-      label: "YouTube Videos",
-    },
-    {
-      number: "200K+",
-      label: "Youtube Subscribers",
-    },
-    {
-      number: "3+ Million",
-      label: "People We Helped",
-    },
-    {
-      number: "30+",
+      number: "70+",
       label: "Projects Developed",
     },
     {
       number: "10+",
-      label: "Flutter Experts",
+      label: "Developer Experts",
     },
     {
       number: "2017",
-      label: "Flutter Development Since",
+      label: "Web Development Since",
+    },
+    {
+      number: "2019",
+      label: "UX/UI Design Since",
+    },
+    {
+      number: "2019",
+      label: "Cloud Computing Since",
+    },
+    {
+      number: "2021",
+      label: "Mobile App Development Since",
     },
   ];
 
@@ -48,8 +48,8 @@ const CompanyStats = () => {
               sleeves, read on.
             </h2>
             <p>
-              HeyFlutter is your premier development partner, specializing in
-              creating cutting-edge apps using Flutter technology. With a deep
+              TadalateStudio is your premier development partner, specializing in
+              creating cutting-edge apps using the latest technology. With a deep
               understanding of your needs, we offer a strong technology stack
               and a treasure trove of brilliant ideas to bring your vision to
               life. Whether you're a startup or an established company, we're
