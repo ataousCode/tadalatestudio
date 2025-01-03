@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Offered.module.css";
-import WE from "../../../Images/WE.png";
+import WE from "../../../Images/we.png";
 import MOBILE from "../../../Images/mobil.png";
 
 const ServiceCard = ({ title, description, image, reverse }) => {
