@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import WE from "../../Images/atalib.jpg";
 import SAKU from "../../Images/saku.jpg";
+import MARK from "../../Images/mark.jpg";
+import USER from "../../Images/u.jpg";
 import H from "../../Images/h.jpg";
 import "./ClientReviews.css";
 
@@ -13,25 +15,25 @@ const ClientReviews = () => {
       text: "TadalateStudio exceeded our expectations with their web development services. Their team was professional, responsive, and delivered a sleek, user-friendly website tailored to our needs. They met deadlines and provided valuable insights throughout the process. Highly recommended for anyone seeking reliable and high-quality web development!",
       author: "Saku Bende T",
       position: "C.E.O Coffex Trading Pvt LTD-Zimbabwe",
-      avatar: SAKU, // Directly assign the imported image
+      avatar: SAKU,
+    },
+    {
+      text: "Travailler avec TadalateStudio a été une expérience incroyablement enrichissante. Son expertise en développement web et mobile a transformé nos idées en une application fluide et intuitive. Il a fait preuve d'une grande rigueur, d'une communication claire et d'une réactivité exceptionnelle. Grâce à lui, notre projet a été livré dans les délais et dépasse nos attentes. Nous recommandons vivement TadalateStudio à toute entreprise cherchant un professionnel talentueux et fiable !",
+      author: "Mark Ag Alba",
+      position: "Entrepreneur",
+      avatar: MARK,
     },
     {
       text: "TadalateStudio did an excellent job developing our website! They were professional, attentive to our needs, and ensured the entire process was smooth and efficient. The final product exceeded our expectations—it’s user-friendly, visually stunning, and perfectly aligned with our vision. They were always available to answer our questions and made sure every detail was handled with care and amended based on request. We highly recommend TroiDev to anyone looking for a skilled and reliable web developer.",
       author: "Yealu Kogarl",
       position: "CEO - Raising-lazarus",
-      avatar: H, // Directly assign the imported image
+      avatar: H,
     },
     {
-      text: "In just 6 months launching 3 projects at the same time for the creation of the most advanced SAS platform for the management of padel academies, an app for 360% communication with customers and a modern website was a huge challenge, and it was possible thanks to HeyFlutter.com as an inv...",
-      author: "Mikel L.",
-      position: "CEO - Digcoach",
-      avatar: WE, // Directly assign the imported image
-    },
-    {
-      text: "I recently had the pleasure of working with HeyFlutter.com to develop my Chemtron E-Commerce App for Android and iOS phones. The engineers at HeyFlutter.com were technically proficient and responsive to my needs. They were able to overcome performance problems and implemen...",
-      author: "Blake Young",
-      position: "CEO - Chemtron",
-      avatar: WE, // Directly assign the imported image
+      text: "TadalateStudio est un développeur web et mobile hors pair. Son approche méthodique et sa créativité ont permis de créer une plateforme à la fois esthétique et fonctionnelle. Il a su comprendre nos besoins rapidement et proposer des solutions innovantes. Ce qui m'a le plus impressionné, c'est sa capacité à résoudre des problèmes techniques complexes avec une grande efficacité. Je le recommande sans hésitation pour tout projet digital ",
+      author: "Muhammed Ag Alhassane",
+      position: "CEO - Tahidjaret",
+      avatar: USER,
     },
   ];
 

@@ -34,7 +34,7 @@ const FAQ = () => {
     },
     {
       question:
-        "Will HeyFlutter also provide support and maintenance services?",
+        "Will TadalateStudio also provide support and maintenance services?",
       answer:
         "Yes, we offer ongoing support and maintenance services to ensure your application runs smoothly after launch.",
     },

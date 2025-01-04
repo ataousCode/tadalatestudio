@@ -8,7 +8,7 @@ import b from "../../../../Images/b.jpg";
 const teamMembers = [
   {
     id: 1,
-    name: "Jeffrey Brown",
+    name: "Banda Willian",
     role: "Front End Developer",
     image: will,
     social: {

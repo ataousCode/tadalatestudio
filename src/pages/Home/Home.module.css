@@ -18,8 +18,8 @@
   padding: 2rem 0;
 }
 
-h1 {
-  font-size: 3.5rem;
+.heroTitle {
+  font-size: 3rem;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   font-weight: 700;

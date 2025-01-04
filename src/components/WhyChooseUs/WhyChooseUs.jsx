@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./WhyChooseUs.module.css";
 import { FaAndroid, FaApple } from "react-icons/fa";
 import WE from "../../Images/we.png";
+import { Link } from "react-router-dom";
 
 const WhyChooseUs = () => {
   const features = [
@@ -15,7 +16,7 @@ const WhyChooseUs = () => {
   return (
     <section className={styles.container}>
       <div className={styles.textSection}>
-        <h1>Why Top Brands Trust HeyFlutter for App Development</h1>
+        <h1>Why Trust TadalateStudio for App Development</h1>
         <p>
           TadalateStudio is your partner in building cutting-edge apps across
           platforms. Whether you need mobile, web, or custom enterprise
@@ -31,7 +32,9 @@ const WhyChooseUs = () => {
             </li>
           ))}
         </ul>
-        <button className={styles.ctaButton}>GET IN TOUCH</button>
+        <button className={styles.ctaButton}>
+          <Link className={styles.ctaButton} to='/contact'>GET IN TOUCH</Link>
+        </button>
       </div>
       <div className={styles.imageSection}>
         <div className={styles.icons}>

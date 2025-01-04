@@ -8,6 +8,7 @@ import TechExpertise from "../../components/TechExpertise/TechExpertise";
 import ClientReviews from "../../components/ClientReviews/ClientReviews";
 import Community from "../../components/Community/Community";
 import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
+import FAQ from '../../components/FAQ/FAQ'
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -62,7 +63,7 @@ const Home = () => {
     <div className={styles.home}>
       <div className={styles.homeContainer}>
         <div className={styles.heroSection}>
-          <h1>
+          <h1 className={styles.heroTitle}>
             Web and <span className={styles.highlight}>Mobile App</span>
             <br />
             Development Company
@@ -190,6 +191,7 @@ const Home = () => {
       <WhyChooseUs />
       <TechExpertise />
       <Community />
+      <FAQ />
       <ContactForm />
     </div>
   );
@@ -197,14 +199,3 @@ const Home = () => {
 
 export default Home;
 
-{
-  /* <DevelopmentProcess />
-<Services />
-<ClientReviews />
-<Portfolio />
-<WhyTrustUs />
-<TechExpertise />
-<Community />
-<SayHi />
-<FAQ /> */
-}

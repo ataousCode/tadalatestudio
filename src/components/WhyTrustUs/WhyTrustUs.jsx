@@ -19,11 +19,12 @@ const WhyTrustUs = () => {
           <div className="text-content">
             <h2>Why TadalateStudio</h2>
             <p>
-              HeyFlutter is your partner in building cutting-edge apps across
-              platforms. Whether you need mobile, web, or custom enterprise
-              solutions, we offer innovative, secure, and scalable development
-              that drives business growth. Our commitment to delivering
-              high-quality results makes us the trusted choice for top brands.
+              TadalateStudio is your partner in building cutting-edge apps
+              across platforms. Whether you need mobile, web, or custom
+              enterprise solutions, we offer innovative, secure, and scalable
+              development that drives business growth. Our commitment to
+              delivering high-quality results makes us the trusted choice for
+              top brands.
             </p>
             <ul className="benefits-list">
               {benefits.map((benefit, index) => (

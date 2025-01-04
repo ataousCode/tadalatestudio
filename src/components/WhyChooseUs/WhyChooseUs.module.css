@@ -56,7 +56,8 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  align-self: flex-start; /* Align button to the start */
+  align-self: flex-start;
+  text-decoration: none;
 }
 
 .ctaButton:hover {
