@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import WE from "../../Images/atalib.jpg";
+import WE from "../../Images/m.jpg";
 import SAKU from "../../Images/saku.jpg";
 import MARK from "../../Images/mark.jpg";
 import USER from "../../Images/u.jpg";
@@ -33,7 +33,7 @@ const ClientReviews = () => {
       text: "TadalateStudio est un développeur web et mobile hors pair. Son approche méthodique et sa créativité ont permis de créer une plateforme à la fois esthétique et fonctionnelle. Il a su comprendre nos besoins rapidement et proposer des solutions innovantes. Ce qui m'a le plus impressionné, c'est sa capacité à résoudre des problèmes techniques complexes avec une grande efficacité. Je le recommande sans hésitation pour tout projet digital ",
       author: "Muhammed Ag Alhassane",
       position: "CEO - Tahidjaret",
-      avatar: USER,
+      avatar: WE,
     },
   ];
 

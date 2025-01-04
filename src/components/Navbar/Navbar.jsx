@@ -42,7 +42,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <div className="logo-icon">S</div>
+          <div className="logo-icon">TS</div>
           TadalateStudio
         </Link>
         <button
