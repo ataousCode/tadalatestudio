@@ -1,16 +1,15 @@
 import React from "react";
-import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { FaSquareWhatsapp } from "react-icons/fa6";
+import { FaTwitter, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import "./Community.css";
 
 const Community = () => {
   const socialLinks = [
     {
-      name: "WhatSapp",
-      icon: <FaSquareWhatsapp />
+      name: "FaceBook",
+      icon: <FaFacebook />
       ,
       link: "#",
-      color: "#FF0000",
+      color: "#0A66C2",
     },
     {
       name: "Twitter",

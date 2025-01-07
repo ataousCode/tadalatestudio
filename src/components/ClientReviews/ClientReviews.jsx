@@ -18,13 +18,13 @@ const ClientReviews = () => {
       avatar: SAKU,
     },
     {
-      text: "Travailler avec TadalateStudio a été une expérience incroyablement enrichissante. Son expertise en développement web et mobile a transformé nos idées en une application fluide et intuitive. Il a fait preuve d'une grande rigueur, d'une communication claire et d'une réactivité exceptionnelle. Grâce à lui, notre projet a été livré dans les délais et dépasse nos attentes. Nous recommandons vivement TadalateStudio à toute entreprise cherchant un professionnel talentueux et fiable !",
+      text: "Travailler avec TadalateStudio a été une expérience incroyablement enrichissante. Son expertise en développement web et mobile a transformé nos idées en une application fluide et intuitive. Il a fait preuve d'une grande rigueur, d'une communication claire et d'une réactivité exceptionnelle. Grâce à lui, notre projet a été livré dans les délais et dépasse nos attentes. Nous recommandons vivement TadalateStudio à toute entreprise cherchant un professionnel talentueux et fiable!",
       author: "Mark Ag Alba",
       position: "Entrepreneur",
       avatar: MARK,
     },
     {
-      text: "TadalateStudio did an excellent job developing our website! They were professional, attentive to our needs, and ensured the entire process was smooth and efficient. The final product exceeded our expectations—it’s user-friendly, visually stunning, and perfectly aligned with our vision. They were always available to answer our questions and made sure every detail was handled with care and amended based on request. We highly recommend TroiDev to anyone looking for a skilled and reliable web developer.",
+      text: "TadalateStudio did an excellent job developing our website! They were professional, attentive to our needs, and ensured the entire process was smooth and efficient. The final product exceeded our expectations—it’s user-friendly, visually stunning, and perfectly aligned with our vision. They were always available to answer our questions and made sure every detail was handled with care and amended based on request. We highly recommend TadalateStudio to anyone looking for a skilled and reliable web developer.",
       author: "Yealu Kogarl",
       position: "CEO - Raising-lazarus",
       avatar: H,

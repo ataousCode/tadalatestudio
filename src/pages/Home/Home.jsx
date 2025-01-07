@@ -8,7 +8,7 @@ import TechExpertise from "../../components/TechExpertise/TechExpertise";
 import ClientReviews from "../../components/ClientReviews/ClientReviews";
 import Community from "../../components/Community/Community";
 import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
-import FAQ from '../../components/FAQ/FAQ'
+import FAQ from "../../components/FAQ/FAQ";
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -73,7 +73,6 @@ const Home = () => {
           </p>
           <p className={styles.description}>
             Build beautiful, high-performance apps and websites with our expert
-            <br />
             team, delivering great results on any platform
           </p>
 
@@ -156,9 +155,11 @@ const Home = () => {
                   <option value="Mobile application">Mobile application</option>
                   <option value="I need a website">I need a website</option>
                   <option value="I need a cloud solution">
-                  I need a cloud solution
+                    I need a cloud solution
                   </option>
-                  <option value="I need help on my web/mobile app">I need help on my web/mobile app</option>
+                  <option value="I need help on my web/mobile app">
+                    I need help on my web/mobile app
+                  </option>
                 </select>
               </div>
 
@@ -198,4 +199,3 @@ const Home = () => {
 };
 
 export default Home;
-

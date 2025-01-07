@@ -167,7 +167,7 @@ const ContactForm = () => {
               </div>
 
               <div className={styles.formGroup}>
-                <label htmlFor="budget">Project Budget</label>
+                <label htmlFor="budget">Service</label>
                 <select
                   id="budget"
                   name="budget"

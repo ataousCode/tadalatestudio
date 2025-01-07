@@ -10,6 +10,7 @@ import Services from "./pages/service/Services";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import ContactPage from "./pages/Contact/ContactPage";
 import NotFound from "./pages/404/NotFound";
+import LandingPage from "./pages/service/LandingPage";
 
 const App = () => {
   const [darkMode, setDarkMode] = React.useState(false);

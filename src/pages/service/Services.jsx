@@ -2,30 +2,23 @@ import React from "react";
 
 import "./Services.css";
 import ConsultingProcess from "../../components/ConsultingProcess/ConsultingProcess";
-import GuidanceSection from "../../components/GuidanceSection/GuidanceSection";
 import ConsultancyTypes from "../../components/ConsultancyTypes/ConsultancyTypes";
 import ContactForm from "../../components/SayHi/SayHi";
 import Offered from "./Offered/Offered";
+import LandingPage from "./LandingPage";
+import NextLevel from "./components/NextLevel";
 
 const Services = () => {
   return (
     <div className="services-page">
+      <LandingPage />
       <div className="services-container">
-        <section className="intro-section">
-          <p className="highlight-text">
-            Let's implement our expertise into your project
-          </p>
-          <h1>How does the consulting work?</h1>
-        </section>
-        <GuidanceSection />
+        {/* <GuidanceSection /> */}
         <ConsultingProcess />
         <ConsultancyTypes />
         <Offered />
-        {/* <ConsultingProcess />
-        <GuidanceSection />
-        <ConsultancyTypes />
-        <ServicesOffered /> */}
       </div>
+      <NextLevel />
       <ContactForm />
     </div>
   );

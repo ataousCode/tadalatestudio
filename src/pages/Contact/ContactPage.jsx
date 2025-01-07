@@ -2,6 +2,8 @@ import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { Check, X, Loader } from "lucide-react";
+import emailjs from "emailjs-com";
+import { FaGithub, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import styles from "./ContactPage.module.css";
 
 const SERVICES = [
@@ -88,6 +90,7 @@ const ContactForm = () => {
     }
   };
 
+  //todo: send the form
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -102,25 +105,48 @@ const ContactForm = () => {
     });
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      const form = e.target;
+      const serviceID = "service_rmv0xgs";
+      const templateID = "template_vno8qoh";
+      const userID = "8px-ZQz2vA12oV2aV";
 
-      // Simulate successful submission
-      setFormState({
-        isSubmitting: false,
-        isSubmitted: true,
-        error: null,
-      });
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        service: formData.service,
+        message: formData.message,
+        to_name: "TadalateStudio", // Customize this for your business
+      };
 
-      // Reset form after successful submission
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        service: "",
-        message: "",
-      });
+      console.log(templateParams);
+
+      const response = await emailjs.send(
+        serviceID,
+        templateID,
+        templateParams,
+        userID
+      );
+
+      if (response.status === 200) {
+        setFormState({
+          isSubmitting: false,
+          isSubmitted: true,
+          error: null,
+        });
+
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Failed to send the email.");
+      }
     } catch (error) {
       setFormState({
         isSubmitting: false,
@@ -181,16 +207,16 @@ const ContactForm = () => {
               <h3>Follow us</h3>
               <div className={styles.socialLinks}>
                 <a href="#" aria-label="GitHub">
-                  GitHub
+                  <FaGithub />
                 </a>
                 <a href="#" aria-label="Facebook">
-                  Facebook
+                  <FaFacebook />
                 </a>
                 <a href="#" aria-label="LinkedIn">
-                  LinkedIn
+                  <FaLinkedin />
                 </a>
                 <a href="#" aria-label="Twitter">
-                  Twitter
+                  <FaTwitter />
                 </a>
               </div>
             </div>

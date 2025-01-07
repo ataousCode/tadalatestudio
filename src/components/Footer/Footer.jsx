@@ -45,16 +45,16 @@ const Footer = () => {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <a href="#">Home</a>
+                <a href="/">Home</a>
               </li>
               <li>
-                <a href="#">Services</a>
+                <a href="/service">Services</a>
               </li>
               <li>
-                <a href="#">About Us</a>
+                <a href="/about">About Us</a>
               </li>
               <li>
-                <a href="#">FAQ</a>
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -65,11 +65,11 @@ const Footer = () => {
             <div className={styles.contactDetails}>
               <div className={styles.contactItem}>
                 <span>Email Address</span>
-                <a href="mailto:seotab@gmail.com">taladatestudio@gmail.com</a>
+                <a href="mailto:tadalatestudio@gmail.com">tadalatestudio@gmail.com</a>
               </div>
               <div className={styles.contactItem}>
                 <span>Phone:</span>
-                <a href="tel:+44-40-4515-5846">+86 190 2811 7508</a>
+                <a href="tel:+86 190 2811 7508">+86 190 2811 7508</a>
               </div>
             </div>
           </div>
