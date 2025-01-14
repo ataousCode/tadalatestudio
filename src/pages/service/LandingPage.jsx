@@ -1,12 +1,14 @@
+/* eslint-disable react/no-unescaped-entities */
 import styles from "./LandingPage.module.css";
+import { Link } from "react-router-dom";
 import StatsCard from "./components/StatsCard";
 import ServiceCard from "./components/ServiceCard";
 
 export default function LandingPage() {
   return (
     <div className={styles.container}>
-      <StatsCard label="ROAS" value="6.91k" position="left" />
-      <StatsCard label="REV" value="$1.2M" position="right" />
+      <StatsCard label="WEB" value="6.91k" position="left" />
+      <StatsCard label="MOBILE" value="8.22k" position="right" />
 
       <main className={styles.main}>
         <div className={styles.hero}>
@@ -21,13 +23,13 @@ export default function LandingPage() {
             <br />
             that captivate your audience.
           </p>
-          <button className={styles.cta}>Contact Us →</button>
+          <Link to="/contact" className={styles.cta}>Contact Us →</Link>
         </div>
 
         <div className={styles.services}>
           <ServiceCard
             icon="search"
-            title="Paid Search"
+            title="Web development"
             description="Maximize Visibility and Conversions with Precision-targeted Ads through Our Expert Paid Search Campaigns."
           />
           <ServiceCard

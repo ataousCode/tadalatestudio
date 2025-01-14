@@ -3,7 +3,7 @@ import styles from "./TeamSection.module.css";
 import atalib from "../../../../Images/atalib.jpg";
 import will from "../../../../Images/will.jpg";
 import ous from "../../../../Images/ous.jpg";
-import b from "../../../../Images/b.jpg";
+import b from "../../../../Images/so.jpg";
 
 const teamMembers = [
   {
@@ -41,8 +41,8 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Ampouala Benjamin",
-    role: "ML & Mobile DEVELOPER",
+    name: "Josip TITO-DENANGOWE",
+    role: "ML-Software Engineer",
     image: b,
     social: {
       facebook: "#",

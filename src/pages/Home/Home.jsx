@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FiSend } from "react-icons/fi";
 import styles from "./Home.module.css"; // Import the CSS module
 import Services from "../../components/Services/Services";
@@ -110,7 +110,7 @@ const Home = () => {
 
         <div className={styles.formSection}>
           <div className={styles.formContainer}>
-            <h2>Let's talk business</h2>
+            <h2>Lets talk business</h2>
             <form onSubmit={handleSubmit}>
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>

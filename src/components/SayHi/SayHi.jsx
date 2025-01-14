@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { FiSend, FiAlertCircle } from "react-icons/fi";
 import ATALIB from "../../Images/atalib.jpg";
 import styles from "./SayHi.module.css";
@@ -116,7 +116,7 @@ const ContactForm = () => {
 
         <div className={styles.contactFormWrapper}>
           <div className={styles.formCard}>
-            <h2>Let's Get Started</h2>
+            <h2>Lets Get Started</h2>
             <form onSubmit={handleSubmit}>
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>

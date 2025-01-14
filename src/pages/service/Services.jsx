@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./Services.css";
 import ConsultingProcess from "../../components/ConsultingProcess/ConsultingProcess";
 import ConsultancyTypes from "../../components/ConsultancyTypes/ConsultancyTypes";

@@ -1,0 +1,288 @@
+:root {
+  --background-color: #1a365d;
+  --text-color: #ffffff;
+  --text-color-muted: #a0aec0;
+  --primary-color: #4c89e3;
+  --secondary-color: #7f6def;
+  --accent-color: #cd9653;
+  --card-background: rgba(255, 255, 255, 0.1);
+}
+
+.background {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.content {
+  flex: 1;
+  max-width: 650px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.gradientText {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-color-muted);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: transform 0.2s, opacity 0.2s;
+  white-space: nowrap;
+}
+
+.buttonPrimary {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+.buttonSecondary {
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.buttonPrimary:hover,
+.buttonSecondary:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.social {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.trustpilot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.trustpilotTitle {
+  color: var(--text-color-muted);
+  font-size: 0.875rem;
+}
+
+.stars {
+  color: #00b67a;
+  font-size: 1.25rem;
+}
+
+.reviews {
+  font-size: 0.875rem;
+  color: var(--text-color-muted);
+}
+
+.followers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.followerItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.platform {
+  color: var(--text-color-muted);
+  font-size: 0.875rem;
+}
+
+.count {
+  font-weight: 600;
+}
+
+.followerLabel {
+  font-size: 0.875rem;
+  color: var(--text-color-muted);
+  width: 100%;
+}
+
+.rightContent {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.testimonialCard {
+  background: var(--card-background);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.testimonialHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonialImage {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonialMeta h3 {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.testimonialMeta p {
+  color: var(--text-color-muted);
+  font-size: 0.875rem;
+}
+
+.testimonialStars {
+  margin-left: auto;
+  color: #fbbf24;
+}
+
+.testimonialText {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.quoteMark {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-family: serif;
+}
+
+.instructorBadge {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--card-background);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.badgeImage {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.instructorInfo {
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.instructorName {
+  color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .social {
+    justify-content: center;
+  }
+
+  .rightContent {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .background {
+    padding: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .social {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .followers {
+    justify-content: center;
+  }
+
+  .testimonialHeader {
+    flex-wrap: wrap;
+  }
+
+  .testimonialStars {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .instructorBadge {
+    flex-direction: column;
+    text-align: center;
+  }
+}

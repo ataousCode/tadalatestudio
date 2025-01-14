@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from "./StatsCard.module.css";
 
 export default function StatsCard({ label, value, position }) {

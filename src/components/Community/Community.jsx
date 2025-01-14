@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaTwitter, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import "./Community.css";
 

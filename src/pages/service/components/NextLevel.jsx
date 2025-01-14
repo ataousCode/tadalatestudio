@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./NextLevel.module.css";
 
 export default function NextLevel() {
@@ -14,7 +15,7 @@ export default function NextLevel() {
           <br />
           customer relationships.
         </p>
-        <button className={styles.cta}>Get started →</button>
+        <Link className={styles.cta} to="/contact" >Get started →</Link>
       </div>
     </section>
   );
