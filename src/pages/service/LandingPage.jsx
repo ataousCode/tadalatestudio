@@ -16,7 +16,7 @@ export default function LandingPage() {
           <h1 className={styles.title}>
             Let's Build Your Online
             <br />
-            Success Story
+            Success Business
           </h1>
           <p className={styles.description}>
             We specialize in crafting data-driven digital campaigns

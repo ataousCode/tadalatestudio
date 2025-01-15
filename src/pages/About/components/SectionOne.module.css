@@ -9,9 +9,10 @@
 }
 
 .background {
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
+  background: linear-gradient(135deg, #1a237e 0%, #311b92 100%);
   color: var(--text-color);
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,6 +59,7 @@
 
 .buttons {
   display: flex;
+  text-decoration: none;
   gap: 1rem;
   margin-bottom: 3rem;
   flex-wrap: wrap;
@@ -69,6 +71,7 @@
   border-radius: 0.5rem;
   font-weight: 500;
   transition: transform 0.2s, opacity 0.2s;
+  text-decoration: none;
   white-space: nowrap;
 }
 

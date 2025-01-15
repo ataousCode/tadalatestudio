@@ -64,6 +64,8 @@ const Footer = () => {
             <div className={styles.contactDetails}>
               <div className={styles.contactItem}>
                 <span>Email Address</span>
+                
+                <a href="mailto:techlevel@tadalatestudio.com">techlevel@tadalatestudio.com</a>
                 <a href="mailto:tadalatestudio@gmail.com">tadalatestudio@gmail.com</a>
               </div>
               <div className={styles.contactItem}>

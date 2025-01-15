@@ -38,6 +38,13 @@
   color: #8b5cf6;
 }
 
+/* .icon {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
 @keyframes float {
   0% {
     transform: translateY(0px);

@@ -4,6 +4,7 @@ import m from '../../../Images/m.jpg'
 import saku from '../../../Images/saku.jpg'
 import mark from '../../../Images/mark.jpg'
 import styles from './SectionOne.module.css'
+import { Link } from 'react-router-dom'
 
 const testimonials = [
   {
@@ -50,12 +51,6 @@ export default function SectionOne() {
             Web Development
             <br />
             Services{' '}
-            {/* <span className={styles.gradientText}>
-              
-              <br />
-              Based
-            </span>{' '}
-            Approach */}
           </h1>
 
           <p className={styles.subtitle}>
@@ -65,9 +60,9 @@ export default function SectionOne() {
           </p>
 
           <div className={styles.buttons}>
-            <a href='/contact' className={styles.buttonPrimary}>
-              We are here waiting for your request →
-            </a>
+            <Link to='/contact' className={styles.buttonPrimary}>
+              Request Us →
+            </Link>
           </div>
         </div>
 

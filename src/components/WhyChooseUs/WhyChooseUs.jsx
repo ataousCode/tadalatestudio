@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./WhyChooseUs.module.css";
 import { FaAndroid, FaApple } from "react-icons/fa";
 import WE from "../../Images/we.png";

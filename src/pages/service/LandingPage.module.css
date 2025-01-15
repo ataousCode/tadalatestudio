@@ -1,6 +1,7 @@
 .container {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #2d1b69 0%, #1a103e 100%);
+  min-height: 80vh;
+  /* background: linear-gradient(135deg, #2d1b69 0%, #1a103e 100%); */
+  background: linear-gradient(135deg, #1a237e 0%, #311b92 100%);
   position: relative;
   overflow: hidden;
 }
@@ -64,6 +65,7 @@
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+  text-decoration: none;
   transition: background-color 0.3s ease;
 }
 

@@ -1,13 +1,13 @@
 .about-page {
   min-height: 100vh;
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
+  background: linear-gradient(135deg, #1a237e 0%, #311b92 100%);
   position: relative;
 }
 
 .hero-section {
   position: relative;
   min-height: 50vh;
-  background-image: url("/placeholder.svg?height=1080&width=1920");
   background-size: cover;
   background-position: center;
   display: flex;

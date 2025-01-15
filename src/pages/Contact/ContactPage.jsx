@@ -1,114 +1,116 @@
-import { useState } from "react";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
-import { Check, X, Loader } from "lucide-react";
-import emailjs from "emailjs-com";
-import { FaGithub, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-import styles from "./ContactPage.module.css";
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
+import { useState } from 'react'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+import { Check, X, Loader } from 'lucide-react'
+import emailjs from 'emailjs-com'
+import { FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import styles from './ContactPage.module.css'
 
 const SERVICES = [
-  "Web Development",
-  "Mobile App Development",
-  "UI/UX Design",
-  "Digital Marketing",
-  "Consulting",
-  "Other",
-];
+  'Web Development',
+  'Mobile App Development',
+  'UI/UX Design',
+  'Digital Marketing',
+  'Consulting',
+  'Other',
+]
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: '',
+  })
 
   const [formState, setFormState] = useState({
     isSubmitting: false,
     isSubmitted: false,
     error: null,
-  });
+  })
 
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({})
 
   const validateForm = () => {
-    const newErrors = {};
+    const newErrors = {}
 
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
+      newErrors.name = 'Name is required'
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = 'Email is required'
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Email is invalid";
+      newErrors.email = 'Email is invalid'
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
+      newErrors.phone = 'Phone number is required'
     }
 
     if (!formData.service) {
-      newErrors.service = "Please select a service";
+      newErrors.service = 'Please select a service'
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = "Message is required";
+      newErrors.message = 'Message is required'
     }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }));
+    }))
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
         [name]: null,
-      }));
+      }))
     }
-  };
+  }
 
   const handlePhoneChange = (value, country, e, formattedValue) => {
     setFormData((prev) => ({
       ...prev,
       phone: formattedValue,
-    }));
+    }))
     if (errors.phone) {
       setErrors((prev) => ({
         ...prev,
         phone: null,
-      }));
+      }))
     }
-  };
+  }
 
   //todo: send the form
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (!validateForm()) {
-      return;
+      return
     }
 
     setFormState({
       isSubmitting: true,
       isSubmitted: false,
       error: null,
-    });
+    })
 
     try {
-      const form = e.target;
-      const serviceID = "service_rmv0xgs";
-      const templateID = "template_vno8qoh";
-      const userID = "8px-ZQz2vA12oV2aV";
+      const form = e.target
+      const serviceID = 'service_rmv0xgs'
+      const templateID = 'template_vno8qoh'
+      const userID = '8px-ZQz2vA12oV2aV'
 
       const templateParams = {
         name: formData.name,
@@ -117,44 +119,44 @@ const ContactForm = () => {
         company: formData.company,
         service: formData.service,
         message: formData.message,
-        to_name: "TadalateStudio", // Customize this for your business
-      };
+        to_name: 'TadalateStudio',
+      }
 
-      console.log(templateParams);
+      console.log(templateParams)
 
       const response = await emailjs.send(
         serviceID,
         templateID,
         templateParams,
         userID
-      );
+      )
 
       if (response.status === 200) {
         setFormState({
           isSubmitting: false,
           isSubmitted: true,
           error: null,
-        });
+        })
 
         setFormData({
-          name: "",
-          email: "",
-          company: "",
-          phone: "",
-          service: "",
-          message: "",
-        });
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          service: '',
+          message: '',
+        })
       } else {
-        throw new Error("Failed to send the email.");
+        throw new Error('Failed to send the email.')
       }
     } catch (error) {
       setFormState({
         isSubmitting: false,
         isSubmitted: false,
-        error: "Failed to send message. Please try again.",
-      });
+        error: 'Failed to send message. Please try again.',
+      })
     }
-  };
+  }
 
   return (
     <div className={styles.pageWrapper}>
@@ -190,14 +192,14 @@ const ContactForm = () => {
               <div className={styles.emailLinks}>
                 <div>
                   <h4>Careers</h4>
-                  <a href="mailto:tadalatestudio@gmail.com">
-                    tadalatestudio@gmail.com
+                  <a href='mailto:techlevel@tadalatestudio.com'>
+                    techlevel@tadalatestudio.com
                   </a>
                 </div>
                 <div>
                   <h4>Press</h4>
-                  <a href="mailto:atalibcodinglevel@gmail.com">
-                    atalibcodinglevel@gmail.com
+                  <a href='mailto:tadalatestudio@gmail.com'>
+                    tadalatestudio@gmail.com
                   </a>
                 </div>
               </div>
@@ -206,16 +208,16 @@ const ContactForm = () => {
             <div className={styles.social}>
               <h3>Follow us</h3>
               <div className={styles.socialLinks}>
-                <a href="#" aria-label="GitHub">
-                  <FaGithub />
+                <a href='#' aria-label='GitHub'>
+                  <FaInstagram />
                 </a>
-                <a href="#" aria-label="Facebook">
+                <a href='#' aria-label='Facebook'>
                   <FaFacebook />
                 </a>
-                <a href="#" aria-label="LinkedIn">
+                <a href='#' aria-label='LinkedIn'>
                   <FaLinkedin />
                 </a>
-                <a href="#" aria-label="Twitter">
+                <a href='#' aria-label='Twitter'>
                   <FaTwitter />
                 </a>
               </div>
@@ -235,12 +237,12 @@ const ContactForm = () => {
             <form onSubmit={handleSubmit} className={styles.form}>
               <div className={styles.formGroup}>
                 <input
-                  type="text"
-                  name="name"
+                  type='text'
+                  name='name'
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Name"
-                  className={errors.name ? styles.errorInput : ""}
+                  placeholder='Name'
+                  className={errors.name ? styles.errorInput : ''}
                 />
                 {errors.name && (
                   <span className={styles.errorText}>{errors.name}</span>
@@ -249,12 +251,12 @@ const ContactForm = () => {
 
               <div className={styles.formGroup}>
                 <input
-                  type="email"
-                  name="email"
+                  type='email'
+                  name='email'
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Email"
-                  className={errors.email ? styles.errorInput : ""}
+                  placeholder='Email'
+                  className={errors.email ? styles.errorInput : ''}
                 />
                 {errors.email && (
                   <span className={styles.errorText}>{errors.email}</span>
@@ -263,24 +265,24 @@ const ContactForm = () => {
 
               <div className={styles.formGroup}>
                 <input
-                  type="text"
-                  name="company"
+                  type='text'
+                  name='company'
                   value={formData.company}
                   onChange={handleChange}
-                  placeholder="Company"
+                  placeholder='Company'
                 />
               </div>
 
               <div className={styles.formGroup}>
                 <PhoneInput
-                  country={"us"}
+                  country={'us'}
                   value={formData.phone}
                   onChange={handlePhoneChange}
                   inputProps={{
-                    name: "phone",
+                    name: 'phone',
                     required: true,
                     className: `${styles.phoneInput} ${
-                      errors.phone ? styles.errorInput : ""
+                      errors.phone ? styles.errorInput : ''
                     }`,
                   }}
                   containerClass={styles.phoneInputContainer}
@@ -289,7 +291,7 @@ const ContactForm = () => {
                   enableSearch={true}
                   disableSearchIcon={false}
                   searchClass={styles.phoneDropdownSearch}
-                  searchStyle={{ margin: "0", width: "100%", height: "30px" }}
+                  searchStyle={{ margin: '0', width: '100%', height: '30px' }}
                 />
                 {errors.phone && (
                   <span className={styles.errorText}>{errors.phone}</span>
@@ -298,14 +300,14 @@ const ContactForm = () => {
 
               <div className={styles.formGroup}>
                 <select
-                  name="service"
+                  name='service'
                   value={formData.service}
                   onChange={handleChange}
                   className={`${styles.serviceSelect} ${
-                    errors.service ? styles.errorInput : ""
+                    errors.service ? styles.errorInput : ''
                   }`}
                 >
-                  <option value="">Select a service</option>
+                  <option value=''>Select a service</option>
                   {SERVICES.map((service) => (
                     <option key={service} value={service}>
                       {service}
@@ -319,19 +321,19 @@ const ContactForm = () => {
 
               <div className={styles.formGroup}>
                 <textarea
-                  name="message"
+                  name='message'
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Message"
-                  rows="4"
-                  className={errors.message ? styles.errorInput : ""}
+                  placeholder='Message'
+                  rows='4'
+                  className={errors.message ? styles.errorInput : ''}
                 />
                 {errors.message && (
                   <span className={styles.errorText}>{errors.message}</span>
                 )}
               </div>
               <button
-                type="submit"
+                type='submit'
                 className={styles.submitButton}
                 disabled={formState.isSubmitting}
               >
@@ -341,7 +343,7 @@ const ContactForm = () => {
                     Sending...
                   </span>
                 ) : (
-                  "Send Message"
+                  'Send Message'
                 )}
               </button>
 
@@ -356,7 +358,7 @@ const ContactForm = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

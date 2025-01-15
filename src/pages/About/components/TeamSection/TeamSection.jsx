@@ -8,17 +8,6 @@ import b from "../../../../Images/so.jpg";
 const teamMembers = [
   {
     id: 1,
-    name: "Banda Willian",
-    role: "Front End Developer",
-    image: will,
-    social: {
-      facebook: "#",
-      twitter: "#",
-      instagram: "#",
-    },
-  },
-  {
-    id: 2,
     name: "Almousleck Atalib Ag",
     role: "DevOps & Cloud Engineer",
     image: atalib,
@@ -29,18 +18,7 @@ const teamMembers = [
     },
   },
   {
-    id: 3,
-    name: "Ousname Sangary",
-    role: "WEB DEVELOPER & ML ENGINEER",
-    image: ous,
-    social: {
-      facebook: "#",
-      twitter: "#",
-      instagram: "#",
-    },
-  },
-  {
-    id: 4,
+    id: 2,
     name: "Josip TITO-DENANGOWE",
     role: "ML-Software Engineer",
     image: b,
@@ -50,6 +28,29 @@ const teamMembers = [
       instagram: "#",
     },
   },
+  {
+    id: 3,
+    name: "Banda Willian",
+    role: "Front End Developer",
+    image: will,
+    social: {
+      facebook: "#",
+      twitter: "#",
+      instagram: "#",
+    },
+  },
+  
+  {
+    id: 4,
+    name: "Ousname Sangary",
+    role: "WEB DEVELOPER & ML ENGINEER",
+    image: ous,
+    social: {
+      facebook: "#",
+      twitter: "#",
+      instagram: "#",
+    },
+  }
 ];
 
 const TeamSection = () => {
