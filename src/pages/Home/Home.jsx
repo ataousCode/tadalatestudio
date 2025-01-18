@@ -11,6 +11,8 @@ import Community from '../../components/Community/Community'
 import WhyChooseUs from '../../components/WhyChooseUs/WhyChooseUs'
 import FAQ from '../../components/FAQ/FAQ'
 import emailjs from 'emailjs-com'
+import DevelopmentProcess from '../../components/Development/DevelopmentProcess'
+import HomeSection from './component/HomeSection'
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -241,6 +243,7 @@ const Home = () => {
       </div>
       <Services />
       <ClientReviews />
+      <DevelopmentProcess />
       <Portfolio />
       <WhyChooseUs />
       <TechExpertise />

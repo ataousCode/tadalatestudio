@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaLightbulb, FaPencilRuler, FaCode, FaRocket, FaHeadset } from 'react-icons/fa';
 import './DevelopmentProcess.css';
 
@@ -7,17 +6,17 @@ const DevelopmentProcess = () => {
     {
       icon: <FaLightbulb />,
       title: 'Discovery',
-      description: 'Outline your app requirements in detail'
+      description: 'Outline your application requirements in detail'
     },
     {
       icon: <FaPencilRuler />,
       title: 'Design',
-      description: 'Your app UI starts taking shape'
+      description: 'Your app UI/UX starts taking shape'
     },
     {
       icon: <FaCode />,
       title: 'Development',
-      description: 'Receive builds of your app for feedback'
+      description: 'Receive builds of your application for feedback'
     },
     {
       icon: <FaRocket />,
