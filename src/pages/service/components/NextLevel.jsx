@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
-import styles from "./NextLevel.module.css";
+import { Link } from 'react-router-dom'
+import styles from './NextLevel.module.css'
+import ContactButton from '../../Contact/components/ContactButton'
 
 export default function NextLevel() {
   return (
@@ -15,8 +16,10 @@ export default function NextLevel() {
           <br />
           customer relationships.
         </p>
-        <Link className={styles.cta} to="/contact" >Get started →</Link>
+        {/* <Link className={styles.cta} to="/contact" >Get started →</Link> */}
+
+        <ContactButton text='Get started →' color='' className={styles.cta} size='large' />
       </div>
     </section>
-  );
+  )
 }

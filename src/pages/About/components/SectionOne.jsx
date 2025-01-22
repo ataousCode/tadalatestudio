@@ -5,6 +5,7 @@ import saku from '../../../Images/saku.jpg'
 import mark from '../../../Images/mark.jpg'
 import styles from './SectionOne.module.css'
 import { Link } from 'react-router-dom'
+import ContactButton from '../../Contact/components/ContactButton'
 
 const testimonials = [
   {
@@ -60,9 +61,10 @@ export default function SectionOne() {
           </p>
 
           <div className={styles.buttons}>
-            <Link to='/contact' className={styles.buttonPrimary}>
-              Request Us →
-            </Link>
+            {/* <Link to='/contact' className={styles.buttonPrimary}>
+              <ContactButton />
+            </Link> */}
+            <ContactButton text='Get Start' color='#4c89e3' />
           </div>
         </div>
 

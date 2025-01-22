@@ -9,24 +9,21 @@ const ConsultingProcess = () => {
       title: "Hire Developers",
       description:
         "Choose one or multiple Flutter Expert Developers from our team with great experience in working on large Flutter projects with clients around the world.",
-      buttonText: "Contact Us",
-      buttonLink: "/contact",
+      
     },
     {
       icon: <FaPhoneAlt />,
       title: "Have Calls on Demand",
       description:
         "Have regular calls with the chosen developers - that guide you and help you to structure your project. Hire these developers flexibly on an hourly basis.",
-      buttonText: "Start Your Calls",
-      buttonLink: "/schedule",
+      
     },
     {
       icon: <FaMoneyBillWave />,
       title: "Pay as you go",
       description:
         "Book with us a consulting package with a minimum duration of 10 hours or more. You can add flexibly additional hours of consulting based on your requirements.",
-      buttonText: "Book Now",
-      buttonLink: "/booking",
+      
     },
   ];
 
@@ -38,9 +35,9 @@ const ConsultingProcess = () => {
             <div className="icon-wrapper">{process.icon}</div>
             <h3>{process.title}</h3>
             <p>{process.description}</p>
-            <a href={process.buttonLink} className="process-button">
+            {/* <a href={process.buttonLink} className="process-button">
               {process.buttonText}
-            </a>
+            </a> */}
           </div>
         ))}
       </div>

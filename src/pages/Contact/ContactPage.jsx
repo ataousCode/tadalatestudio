@@ -173,7 +173,7 @@ const ContactPage = () => {
             </div>
 
             <div className={styles.location}>
-              <h4>Liberia</h4>
+              <h4>Mali</h4>
               <p>Bamako / Mali</p>
               <p>Baco Djicoroni Golf</p>
             </div>

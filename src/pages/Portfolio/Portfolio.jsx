@@ -4,6 +4,7 @@ import HTML from "../../Images/html.svg";
 import "./Portfolio.css";
 import ProjectList from "./Components/ProjectList/ProjectList";
 import ContactForm from "../../components/SayHi/SayHi";
+import ContactButton from "../Contact/components/ContactButton";
 
 const Portfolio = () => {
   return (
@@ -17,9 +18,10 @@ const Portfolio = () => {
               clients around the world. We could be your next success story and
               help you to transform your project into reality.
             </p>
-            <Link to="/contact" className="contact-button">
-              CONTACT US
-            </Link>
+            {/* <Link to="/contact" className="contact-button">
+              CONTACT US <ContactButton text="GET IN TOUCH" />
+            </Link> */}
+            <ContactButton text="GET IN TOUCH" />
           </div>
           <div className="devices-mockup">
             <img

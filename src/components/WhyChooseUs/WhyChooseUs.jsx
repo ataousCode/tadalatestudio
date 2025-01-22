@@ -3,6 +3,7 @@ import styles from "./WhyChooseUs.module.css";
 import { FaAndroid, FaApple } from "react-icons/fa";
 import WE from "../../Images/we.png";
 import { Link } from "react-router-dom";
+import ContactButton from "../../pages/Contact/components/ContactButton";
 
 const WhyChooseUs = () => {
   const features = [
@@ -32,9 +33,10 @@ const WhyChooseUs = () => {
             </li>
           ))}
         </ul>
-        <button className={styles.ctaButton}>
+        {/* <button className={styles.ctaButton}>
           <Link className={styles.ctaButton} to='/contact'>GET IN TOUCH</Link>
-        </button>
+        </button> */}
+        <ContactButton text="GET IN TOUCH" />
       </div>
       <div className={styles.imageSection}>
         <div className={styles.icons}>

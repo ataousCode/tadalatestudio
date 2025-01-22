@@ -1,3 +1,7 @@
+.wrapper {
+  display: inline-block;
+}
+
 .contactButton {
   background-color: #e91e63;
   color: #ffffff;
@@ -10,6 +14,23 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.buttonSmall {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* Medium size (default) */
+.buttonMedium {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Large size */
+.buttonLarge {
+  padding: 14px 28px;
+  font-size: 20px;
 }
 
 .contactButton:hover {

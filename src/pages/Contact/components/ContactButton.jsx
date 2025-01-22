@@ -4,21 +4,34 @@ import { FaEnvelope } from 'react-icons/fa'
 import styles from './ContactButton.module.css'
 import ContactPage from '../ContactPage'
 
-const ContactButton = () => {
+const ContactButton = ({
+  text = 'Contact',
+  color = '#e91e63',
+  className = '',
+  wrapperClassName = '',
+  size = 'medium',
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const openModal = () => setIsModalOpen(true)
   const closeModal = () => setIsModalOpen(false)
 
+  const sizeClass =
+    styles[`button${size.charAt(0).toUpperCase() + size.slice(1)}`]
+
   return (
-    <>
-      <button className={styles.contactButton} onClick={openModal}>
-        <FaEnvelope /> Contact
+    <div className={`${styles.wrapper} ${wrapperClassName}`}>
+      <button
+        className={`${styles.contactButton} ${sizeClass} ${className}`}
+        onClick={openModal}
+        style={{ backgroundColor: color }}
+      >
+        <FaEnvelope /> {text}
       </button>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <ContactPage />
       </Modal>
-    </>
+    </div>
   )
 }
 
