@@ -2,8 +2,9 @@ import { Facebook, Twitter, Instagram } from "lucide-react";
 import styles from "./TeamSection.module.css";
 import atalib from "../../../../Images/atalib.jpg";
 import will from "../../../../Images/will.jpg";
-import ous from "../../../../Images/ous.jpg";
+import be from "../../../../Images/b.jpg";
 import b from "../../../../Images/so.jpg";
+import ous from "../../../../Images/ous.jpg";
 
 const teamMembers = [
   {
@@ -42,8 +43,19 @@ const teamMembers = [
   
   {
     id: 4,
+    name: "Ampouala Benjamin",
+    role: "Mobile App Developer",
+    image: be,
+    social: {
+      facebook: "#",
+      twitter: "#",
+      instagram: "#",
+    },
+  },
+  {
+    id: 5,
     name: "Ousname Sangary",
-    role: "WEB DEVELOPER & ML ENGINEER",
+    role: "BackEnd Developer",
     image: ous,
     social: {
       facebook: "#",

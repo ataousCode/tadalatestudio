@@ -20,8 +20,7 @@ const App = () => {
     // Set timer to false after 5 seconds
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 6000)
-
+    }, 4000)
     return () => clearTimeout(timer) // Cleanup the timer on unmount
   }, [])
 
