@@ -154,28 +154,28 @@ const ContactPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.contactInfo}>
-        <h1>Contact us</h1>
+        <div className={styles.contactH1}>Contact us</div>
         <h2 className={styles.mainHeading}>Let's work together</h2>
-        <p className={styles.subtitle}>We can not wait to hear from you.</p>
+        <div className={styles.subtitle}>We can not wait to hear from you.</div>
 
         <div className={styles.offices}>
-          <h3>Our offices</h3>
-          <p className={styles.officeDesc}>
+          <h3 className={styles.mainHeading}>Our offices</h3>
+          <div className={styles.officeDescs}>
             Prefer doing things in person? We are happy to have a face to face
             meeting with you.
-          </p>
+          </div>
 
           <div className={styles.locations}>
             <div className={styles.location}>
               <h4>China</h4>
-              <p>Sichuan</p>
-              <p>Southwest University of Science and Technology</p>
+              <div>Sichuan</div>
+              <div>Southwest University of Science and Technology</div>
             </div>
 
             <div className={styles.location}>
-              <h4>Mali</h4>
-              <p>Bamako / Mali</p>
-              <p>Baco Djicoroni Golf</p>
+              <div>Mali</div>
+              <div>Bamako / Mali</div>
+              <div>Baco Djicoroni Golf</div>
             </div>
           </div>
 
@@ -187,7 +187,7 @@ const ContactPage = () => {
                 <a href='mailto:techlevel@tadalatestudio.com'>
                   techlevel@tadalatestudio.com
                 </a>
-                <br />
+                 <br /> <br />
                 <a href='tel:+86 130 2720 7507'>+86 130 2720 7507</a>
               </div>
               <div>
@@ -196,7 +196,7 @@ const ContactPage = () => {
                 <a href='mailto:tadalatestudio@gmail.com'>
                   tadalatestudio@gmail.com
                 </a>
-                <br />
+                <br /> <br />
                 <a href='tel:+86 190 2811 7508'>+86 190 2811 7508</a>
               </div>
             </div>

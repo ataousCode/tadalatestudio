@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
         {/* <button className={styles.ctaButton}>
           <Link className={styles.ctaButton} to='/contact'>GET IN TOUCH</Link>
         </button> */}
-        <ContactButton text="GET IN TOUCH" />
+        <ContactButton text="GET IN TOUCH" wrapperClassName={styles.ctaButton} />
       </div>
       <div className={styles.imageSection}>
         <div className={styles.icons}>

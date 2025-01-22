@@ -1,4 +1,9 @@
 .container {
+  all: initial;
+  font-family: inherit; /* Use the parent's font family */
+  font-size: inherit; /* Use the parent's font size */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -15,9 +20,9 @@
   color: #333333;
 }
 
-h1 {
+.contactH1 {
   font-size: 1rem;
-  color: #666666;
+  color: black;
   margin: 0;
 }
 
@@ -47,7 +52,7 @@ h1 {
   color: #333333;
 }
 
-.officeDesc {
+.officeDescs {
   color: #666666;
   margin-bottom: 1.5rem;
 }
