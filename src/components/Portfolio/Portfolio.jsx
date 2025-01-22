@@ -4,6 +4,7 @@ import styles from "./PortfolioPage.module.css";
 import WE from "../../Images/pr.png";
 import mobile from "../../Images/rw.png";
 import TR from "../../Images/tr.png";
+import { Link } from "react-router-dom";
 
 const PortfolioPage = () => {
   const portfolioItems = [
@@ -38,9 +39,9 @@ const PortfolioPage = () => {
       <div className={styles.header}>
         <h1>We delivered many successful Products</h1>
         <p>Learn about the different apps and websites we have developed</p>
-        <a href="/portfolio">
+        <Link to="/portfolio">
           <button className={styles.portfolioButton}>SEE PORTFOLIO</button>
-        </a>
+        </Link>
       </div>
 
       <div className={styles.carousel}>
