@@ -161,8 +161,8 @@ const ContactPage = () => {
         <div className={styles.offices}>
           <h3>Our offices</h3>
           <p className={styles.officeDesc}>
-            Prefer doing things in person? We don't but we have to list our
-            addresses here for legal reasons.
+            Prefer doing things in person? We are happy to have a face to face
+            meeting with you.
           </p>
 
           <div className={styles.locations}>
@@ -174,8 +174,8 @@ const ContactPage = () => {
 
             <div className={styles.location}>
               <h4>Liberia</h4>
-              <p>Monrovia</p>
-              <p>Greater Monrovia</p>
+              <p>Bamako / Mali</p>
+              <p>Baco Djicoroni Golf</p>
             </div>
           </div>
 
@@ -187,12 +187,17 @@ const ContactPage = () => {
                 <a href='mailto:techlevel@tadalatestudio.com'>
                   techlevel@tadalatestudio.com
                 </a>
+                <br />
+                <a href='tel:+86 130 2720 7507'>+86 130 2720 7507</a>
               </div>
               <div>
                 <h4>Press</h4>
+
                 <a href='mailto:tadalatestudio@gmail.com'>
                   tadalatestudio@gmail.com
                 </a>
+                <br />
+                <a href='tel:+86 190 2811 7508'>+86 190 2811 7508</a>
               </div>
             </div>
           </div>
@@ -200,16 +205,32 @@ const ContactPage = () => {
           <div className={styles.social}>
             <h3>Follow us</h3>
             <div className={styles.socialLinks}>
-              <a href='#' aria-label='Instagram'>
+              <a
+                href='https://www.instagram.com/a141406/?next=%2F'
+                aria-label='Instagram'
+                target='_blank'
+              >
                 <FaInstagram />
               </a>
-              <a href='#' aria-label='Facebook'>
+              <a
+                href='https://www.facebook.com/wanethan/'
+                aria-label='Facebook'
+                target='_blank'
+              >
                 <FaFacebook />
               </a>
-              <a href='#' aria-label='LinkedIn'>
+              <a
+                href='https://www.linkedin.com/in/almousleck-atalib-ag-893455312/'
+                aria-label='LinkedIn'
+                target='_blank'
+              >
                 <FaLinkedin />
               </a>
-              <a href='#' aria-label='Twitter'>
+              <a
+                href='https://x.com/atalib_ag?s=21'
+                target='_blank'
+                aria-label='Twitter'
+              >
                 <FaTwitter />
               </a>
             </div>

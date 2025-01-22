@@ -1,95 +1,194 @@
-import {
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-  FaInstagram,
-  FaWhatsappSquare,
-} from "react-icons/fa";
-import styles from "./Footer.module.css";
+import React, { useState } from 'react'
+import { Heart, Mail, Shield, Phone } from 'lucide-react'
+import Modal from './components/Modal'
+import styles from './Footer.module.css'
 
-const Footer = () => {
+function Footer() {
+  const [activeModal, setActiveModal] = useState(null)
+
+  const closeModal = () => setActiveModal(null)
+
   return (
     <footer className={styles.footer}>
-      <div className={styles.wave}></div>
       <div className={styles.container}>
-        <div className={styles.content}>
-          {/* Company Info */}
-          <div className={styles.companyInfo}>
-            <h2 className={styles.logo}>TadateStudio</h2>
-            <p className={styles.description}>
-              DatalateStudio have much planned for the future, working with
-              great clients and continued software development.
+        <div className={styles.grid}>
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>
+              <Heart className={styles.iconRed} />
+              DatalateStudio
+            </h3>
+            <p className={styles.text}>
+              We're dedicated to providing exceptional service while maintaining
+              the highest standards of privacy and security for our valued
+              customers.
             </p>
-            <div className={styles.socialLinks}>
-              <a href="#" aria-label="YouTube">
-                <FaWhatsappSquare />
-              </a>
-              <a href="#" aria-label="Facebook">
-                <FaFacebook />
-              </a>
-              <a href="#" aria-label="Twitter">
-                <FaTwitter />
-              </a>
-              <a href="#" aria-label="YouTube">
-                <FaLinkedin />
-              </a>
-              <a href="#" aria-label="YouTube">
-                <FaInstagram />
-              </a>
-            </div>
           </div>
-
-          {/* Quick Links */}
-          <div className={styles.quickLinks}>
-            <h3>Quick Links</h3>
-            <ul>
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>
+              <Shield className={styles.iconBlue} />
+              Quick Links
+            </h3>
+            <ul className={styles.linkList}>
               <li>
-                <a href="/">Home</a>
+                <button
+                  onClick={() => setActiveModal('terms')}
+                  className={styles.link}
+                >
+                  Terms of Service
+                </button>
               </li>
               <li>
-                <a href="/service">Services</a>
+                <button
+                  onClick={() => setActiveModal('privacy')}
+                  className={styles.link}
+                >
+                  Privacy Policy
+                </button>
               </li>
               <li>
-                <a href="/about">About Us</a>
-              </li>
-              <li>
-                <a href="/contact">Contact</a>
+                <button
+                  onClick={() => setActiveModal('support')}
+                  className={styles.link}
+                >
+                  Support
+                </button>
               </li>
             </ul>
           </div>
-
-          {/* Contact Info */}
-          <div className={styles.contactInfo}>
-            <h3>Contact us</h3>
-            <div className={styles.contactDetails}>
-              <div className={styles.contactItem}>
-                <span>Email Address</span>
-                
-                <a href="mailto:techlevel@tadalatestudio.com">techlevel@tadalatestudio.com</a>
-                <a href="mailto:tadalatestudio@gmail.com">tadalatestudio@gmail.com</a>
-              </div>
-              <div className={styles.contactItem}>
-                <span>Phone:</span>
-                <a href="tel:+86 190 2811 7508">+86 190 2811 7508</a>
-              </div>
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>
+              <Mail className={styles.iconGreen} />
+              Contact
+            </h3>
+            <div className={styles.contactInfo}>
+              <p className={styles.contactItem}>
+                <Phone className={styles.contactIcon} />
+                +86 130 2720 7507
+              </p>
+              <p className={styles.contactItem}>
+                <Phone className={styles.contactIcon} />
+                +86 190 2811 7508
+              </p>
+              <p className={styles.contactItem}>
+                <Mail className={styles.contactIcon} />
+                tadalatestudio@gmail.com
+              </p>
+              <p className={styles.contactItem}>
+                <Mail className={styles.contactIcon} />
+                techlevel@tadalatestudio.com
+              </p>
             </div>
           </div>
         </div>
-
-        {/* Footer Bottom */}
-        <div className={styles.bottom}>
-          <p className={styles.copyright}>
-            taladatestudio © 2025. All rights reserved.
+        <div className={styles.copyright}>
+          <p>
+            &copy; {new Date().getFullYear()} tadalatestudio. All rights
+            reserved.
           </p>
-          <div className={styles.bottomLinks}>
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
-            <a href="#">Support</a>
-          </div>
         </div>
       </div>
-    </footer>
-  );
-};
 
-export default Footer;
+      {/* Terms Modal */}
+      <Modal
+        isOpen={activeModal === 'terms'}
+        onClose={closeModal}
+        title='Terms of Service'
+      >
+        <div className={styles.modalContent}>
+          <h3 className={styles.modalHeading}>1. Acceptance of Terms</h3>
+          <p className={styles.modalText}>
+            By accessing and using this website, you accept and agree to be
+            bound by the terms and provision of this agreement.
+          </p>
+
+          <h3 className={styles.modalHeading}>2. Use License</h3>
+          <p className={styles.modalText}>
+            Permission is granted to temporarily download one copy of the
+            materials (information or software) on our website for personal,
+            non-commercial transitory viewing only.
+          </p>
+
+          <h3 className={styles.modalHeading}>3. Disclaimer</h3>
+          <p className={styles.modalText}>
+            The materials on our website are provided on an 'as is' basis. We
+            make no warranties, expressed or implied, and hereby disclaim and
+            negate all other warranties including, without limitation, implied
+            warranties or conditions of merchantability, fitness for a
+            particular purpose, or non-infringement of intellectual property or
+            other violation of rights.
+          </p>
+        </div>
+      </Modal>
+
+      {/* Privacy Modal */}
+      <Modal
+        isOpen={activeModal === 'privacy'}
+        onClose={closeModal}
+        title='Privacy Policy'
+      >
+        <div className={styles.modalContent}>
+          <h3 className={styles.modalHeading}>1. Information We Collect</h3>
+          <p className={styles.modalText}>
+            We collect information that you provide directly to us, information
+            we obtain automatically when you visit our website, and information
+            from other sources.
+          </p>
+
+          <h3 className={styles.modalHeading}>
+            2. How We Use Your Information
+          </h3>
+          <p className={styles.modalText}>
+            We use the information we collect to provide, maintain, and improve
+            our services, to develop new ones, and to protect our company and
+            our users.
+          </p>
+
+          <h3 className={styles.modalHeading}>3. Information Sharing</h3>
+          <p className={styles.modalText}>
+            We do not share your personal information with companies,
+            organizations, or individuals outside of our company except in the
+            following cases: with your consent, for legal reasons, or to protect
+            rights, property, and safety.
+          </p>
+        </div>
+      </Modal>
+
+      {/* Support Modal */}
+      <Modal
+        isOpen={activeModal === 'support'}
+        onClose={closeModal}
+        title='Support'
+      >
+        <div className={styles.modalContent}>
+          <h3 className={styles.modalHeading}>Contact Support</h3>
+          <p className={styles.modalText}>
+            Our support team is available 24/7 to help you with any questions or
+            concerns. Here's how you can reach us:
+          </p>
+
+          <ul className={styles.supportList}>
+            <li className={styles.supportItem}>
+              <Phone className={styles.supportIcon} />
+              <span>Phone: +86 130 2720 7507</span>
+              <span>Phone: +86 190 2811 7508</span>
+            </li>
+            <li className={styles.supportItem}>
+              <Mail className={styles.supportIcon} />
+              <span>Email: tadalatestudio@gmail.com</span>
+              <span>Email: techlevel@tadalatestudio.com</span>
+            </li>
+          </ul>
+
+          <h3 className={styles.modalHeading}>Support Hours</h3>
+          <p className={styles.modalText}>
+            Monday - Friday: 9:00 AM - 8:00 PM EST
+            <br />
+            Saturday - Sunday: 10:00 AM - 6:00 PM EST
+          </p>
+        </div>
+      </Modal>
+    </footer>
+  )
+}
+
+export default Footer

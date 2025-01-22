@@ -114,7 +114,7 @@ const Home = () => {
             <h2>Featured in:</h2>
             <div className={styles.featuredLogos}>
               <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg'
+                src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg'
                 alt='Top Development Company'
                 className={styles.featuredLogo}
               />
@@ -124,7 +124,7 @@ const Home = () => {
                 className={styles.featuredLogo}
               />
               <img
-                src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'
+                src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg'
                 alt='GoodFirms'
                 className={styles.featuredLogo}
               />
@@ -135,6 +135,11 @@ const Home = () => {
               />
               <img
                 src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg'
+                alt='Development Company'
+                className={styles.featuredLogo}
+              />
+              <img
+                src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg'
                 alt='Development Company'
                 className={styles.featuredLogo}
               />

@@ -145,6 +145,7 @@ h1 {
   transition: border-color 0.3s ease;
   background-color: #ffffff;
   color: #333333;
+  resize: none;
 }
 
 .formGroup input::placeholder,
@@ -226,11 +227,10 @@ h1 {
 }
 
 .errorInput {
-  border-color: #ff4444 !important;
-}
-
-.error {
-  color: #ff4444;
+  color: #e91e63;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
 }
 
 .errorText {
