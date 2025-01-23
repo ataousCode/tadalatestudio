@@ -43,7 +43,7 @@ const App = () => {
             <Route path='*' element={<NotFound />} />
           </Routes>
           {/* <ChatBox /> */}
-          <TawkToWidget />
+          {/* <TawkToWidget /> */}
           <WhatsAppButton />
           <Footer />
         </div>
