@@ -12,6 +12,7 @@ import ContactPage from './pages/Contact/ContactPage'
 import NotFound from './pages/404/NotFound'
 import WhatsAppButton from './pages/WhatsAppButton/WhatsAppButton'
 import Loader from './pages/Loader/Loader'
+import TawkToWidget from './components/TawkToWidget/TawkToWidget'
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -41,6 +42,8 @@ const App = () => {
             {/* Catch-all route for undefined pages */}
             <Route path='*' element={<NotFound />} />
           </Routes>
+          {/* <ChatBox /> */}
+          <TawkToWidget />
           <WhatsAppButton />
           <Footer />
         </div>
