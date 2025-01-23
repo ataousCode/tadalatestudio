@@ -170,11 +170,17 @@ function Footer() {
             <li className={styles.supportItem}>
               <Phone className={styles.supportIcon} />
               <span>Phone: +86 130 2720 7507</span>
+            </li>
+            <li className={styles.supportItem}>
+              <Phone className={styles.supportIcon} />
               <span>Phone: +86 190 2811 7508</span>
             </li>
             <li className={styles.supportItem}>
               <Mail className={styles.supportIcon} />
               <span>Email: tadalatestudio@gmail.com</span>
+            </li>
+            <li className={styles.supportItem}>
+              <Mail className={styles.supportIcon} />
               <span>Email: techlevel@tadalatestudio.com</span>
             </li>
           </ul>

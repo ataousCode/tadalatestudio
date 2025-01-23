@@ -3,6 +3,8 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import { Check, X, Loader } from 'lucide-react'
 import emailjs from 'emailjs-com'
+import ml from '../../Images/mali.png'
+import cn from '../../Images/china.png'
 import { FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import styles from './ContactPage.module.css'
 
@@ -167,13 +169,13 @@ const ContactPage = () => {
 
           <div className={styles.locations}>
             <div className={styles.location}>
-              <h4>China</h4>
+              <div>China <img src={cn} alt="" width={16} height={16} /></div>
               <div>Sichuan</div>
               <div>Southwest University of Science and Technology</div>
             </div>
 
             <div className={styles.location}>
-              <div>Mali</div>
+              <div>Mali <img src={ml} alt="" width={16} height={14} /></div>
               <div>Bamako / Mali</div>
               <div>Baco Djicoroni Golf</div>
             </div>

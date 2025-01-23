@@ -36,13 +36,13 @@ const FAQ = () => {
       question:
         "Will TadalateStudio also provide support and maintenance services?",
       answer:
-        "Yes, we offer ongoing support and maintenance services to ensure your application runs smoothly after launch.",
+        "Yes, we can offer you a support and maintenance services contract to ensure your application runs smoothly after launch.",
     },
     {
       question:
-        "Will you assist me to upload my app to the PlayStore or AppStore?",
+        "Will tadalatestudio team assist me to upload my app to the PlayStore or AppStore?",
       answer:
-        "Yes, we provide complete assistance with app store submissions and help you meet all requirements for both Google Play Store and Apple App Store.",
+        "Yes, we can provide assistance with app store submissions and help you meet all requirements for both Google Play Store and Apple App Store.",
     },
     {
       question: "What are the benefits of outsourcing mobile app development?",
